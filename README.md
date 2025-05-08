@@ -1,0 +1,2 @@
+# CH32V307VCT6_TFTLCD_ST7735
+适用芯片CH32V307VCT6 TFT_LCD ST7735驱动 .实现功能： 1）TFT_LCD显示ASCII码字符。 2)滚动多页显示多行字符。 3）滚动页面时交替显示不同LCD背光。
