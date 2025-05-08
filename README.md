@@ -1,9 +1,9 @@
 # CH32V307VCT6_TFTLCD_ST7735
 *****************
-## 适用芯片CH32V307VCT6 TFT_LCD ST7735驱动
+适用芯片CH32V307VCT6 TFT_LCD ST7735驱动
 
-## AUTHOR:MrThinker.Zhang
-## DATE:2025-05-08 17:01
+AUTHOR:MrThinker.Zhang
+DATE:2025-05-08 17:01
 
 # *****************
 # 一、接线方式
