@@ -55,7 +55,7 @@ main-build: CH32V307VCT6_LCD.elf secondary-outputs
 
 # Tool invocations
 CH32V307VCT6_LCD.elf: $(OBJS) $(USER_OBJS)
-	@	riscv-none-embed-gcc -march=rv32imacxw -mabi=ilp32 -msmall-data-limit=8 -msave-restore -fmax-errors=20 -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized -g -T "e:/CH32V307开发版/CH32V307VCT6_LCD/Ld/Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"CH32V307VCT6_LCD.map" --specs=nano.specs --specs=nosys.specs -o "CH32V307VCT6_LCD.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@	riscv-none-embed-gcc -march=rv32imacxw -mabi=ilp32 -msmall-data-limit=8 -msave-restore -fmax-errors=20 -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized -g -T "e:/CH32V307开发版/CH32V307VCT6_TFTLCD_ST7735/Ld/Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"CH32V307VCT6_LCD.map" --specs=nano.specs --specs=nosys.specs -o "CH32V307VCT6_LCD.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 CH32V307VCT6_LCD.hex: CH32V307VCT6_LCD.elf
 	@	riscv-none-embed-objcopy -O ihex "CH32V307VCT6_LCD.elf" "CH32V307VCT6_LCD.hex"
 CH32V307VCT6_LCD.lst: CH32V307VCT6_LCD.elf

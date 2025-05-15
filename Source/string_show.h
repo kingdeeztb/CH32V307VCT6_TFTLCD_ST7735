@@ -75,7 +75,7 @@ void LCD_ScrollUp (uint16_t bg_color) {
     for (uint16_t y = CHAR_HEIGHT + LINE_SPACING; y < TFT_HEIGHT; y++) {
         for (uint16_t x = 0; x < TFT_WIDTH; x++) {
             // TODO:这里可以优化为直接操作GRAM而不是逐个像素读取
-            uint16_t pixel_color = BLACK;  // TODO:需要实现LCD_ReadPixel才能正确获取颜色
+            uint16_t pixel_color = BLUE;  // TODO:需要实现LCD_ReadPixel才能正确获取颜色
 
             if (y >= (TFT_HEIGHT - (CHAR_HEIGHT + LINE_SPACING))) {
                 pixel_color = bg_color;  // 最后几行直接用背景色填充

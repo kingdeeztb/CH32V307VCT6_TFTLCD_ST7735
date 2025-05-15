@@ -28,6 +28,7 @@ AAAAAAAAAAAAAAAAAA
 #include "../Source/font.h"
 #include "../Source/picture_show.h"
 #include "../Source/string_show.h"
+#include "../Source/time_show.h"
 
 int main (void) {
     NVIC_PriorityGroupConfig (NVIC_PriorityGroup_2);
@@ -48,12 +49,23 @@ int main (void) {
     LCD_ClearScreen (BLUE);                                             // 清除屏幕，填充蓝色，显示滚动字幕。
 
     while (1) {
+
+        // 在屏幕顶部显示时间
         printf ("Running test %d\n", k++);
 
         if (long_text[i]) {
-            Delay_Ms (500);
+            Delay_Ms (1000);
             printf ("%s\n", long_text[i]);
             LCD_ClearScreen (BLUE);
+
+            RTC_Init();
+            Timer_Init();
+            // 显示时间
+            Get_TimeString (timeStr);
+            LCD_DrawString (timeStr, WHITE, BLUE);
+
+            Delay_Ms (1000);
+            // 显示字符
             LCD_DrawString (long_text[i++], WHITE, BLUE);
             continue;
         }
@@ -64,6 +76,15 @@ int main (void) {
             Delay_Ms (1000);
             printf ("%s\n", test_strings[j]);
             LCD_ClearScreen (RED);
+
+            RTC_Init();
+            Timer_Init();
+            // 显示时间
+            Get_TimeString (timeStr);
+            LCD_DrawString (timeStr, WHITE, RED);
+
+            Delay_Ms (1000);
+            // 显示字符
             LCD_DrawString (test_strings[j++], WHITE, RED);
             continue;
         }
@@ -85,6 +106,8 @@ int main (void) {
         }
 
         l++;
+        // 背光交替控制
+        // GPIO_WriteBit(GPIOA, LCD_BL_PIN, (l%2)? Bit_SET : Bit_RESET);
         Delay_Ms (1000);  // Wait 20 seconds before clearing and restarting the sequence.
     }
 }

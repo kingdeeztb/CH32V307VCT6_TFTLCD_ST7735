@@ -5,7 +5,7 @@
 			"type": "mrs-debugger",
 			"request": "launch",
 			"name": "CH32V307VCT6_LCD",
-			"cwd": "e:\\CH32V307开发版\\CH32V307VCT6_LCD",
+			"cwd": "e:\\CH32V307开发版\\CH32V307VCT6_TFTLCD_ST7735",
 			"openOCDCfg": {
 				"useLocalOpenOCD": true,
 				"executable": "d:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/OpenOCD/OpenOCD/bin/openocd.exe",
@@ -39,8 +39,8 @@
 					"additionalCommands": []
 				},
 				"loadedFiles": {
-					"executableFile": "e:\\CH32V307开发版\\CH32V307VCT6_LCD\\obj\\CH32V307VCT6_LCD.elf",
-					"symbolFile": "e:\\CH32V307开发版\\CH32V307VCT6_LCD\\obj\\CH32V307VCT6_LCD.elf",
+					"executableFile": "e:\\CH32V307开发版\\CH32V307VCT6_TFTLCD_ST7735\\obj\\CH32V307VCT6_LCD.elf",
+					"symbolFile": "e:\\CH32V307开发版\\CH32V307VCT6_TFTLCD_ST7735\\obj\\CH32V307VCT6_LCD.elf",
 					"executableFileOffset": 0,
 					"symbolFileOffset": 0
 				},
